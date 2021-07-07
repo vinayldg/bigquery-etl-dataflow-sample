@@ -31,8 +31,8 @@ mvn compile exec:java -e \
     --gcpTempLocation=gs://${STAGING_BUCKET}/gcpTemp \
     --runner=DataflowRunner \
     --jobName=etl-into-bigquery-${CLASS_NAME} \
-    --numWorkers=20 \
-    --maxNumWorkers=70 \
+    --numWorkers=6 \
+    --maxNumWorkers=4 \
     --bigQueryTablename=${PROJECT_ID}:${DATASET}.${DESTINATION_TABLE} \
     --diskSizeGb=100 \
     --zone=${ZONE} \
