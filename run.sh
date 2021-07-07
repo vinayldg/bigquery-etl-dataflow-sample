@@ -36,5 +36,5 @@ mvn compile exec:java -e \
     --bigQueryTablename=${PROJECT_ID}:${DATASET}.${DESTINATION_TABLE} \
     --diskSizeGb=100 \
     --zone=${ZONE} \
-    --workerMachineType=n1-standard-1"
+    --workerMachineType=c2-standard-4"
 
